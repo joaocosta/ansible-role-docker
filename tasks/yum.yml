@@ -1,9 +1,10 @@
 ---
 - include_vars: "{{ item }"
   with_first_found:
-   - "{{ ansible_distribution }}.yml"
-   - "{{ ansible_os_family }}.yml"
-   - "default.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+    - "default.yml"
+
 - name: YUM | Disable UEK R3 for Oracle Linux
   yum_repository:
     name: ol7_UEKR3
