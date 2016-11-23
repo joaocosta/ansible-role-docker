@@ -11,6 +11,10 @@ galaxy_info:
     versions:
     - 6
     - 7
+  - name: RedHat
+    versions:
+    - 6
+    - 7
   - name: Fedora
     versions:
     - 22
@@ -31,5 +35,6 @@ galaxy_info:
   - docker
   - ubuntu
   - centos
+  - redhat
   - debian
 dependencies: []

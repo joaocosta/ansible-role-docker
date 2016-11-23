@@ -11,6 +11,8 @@ This role provides the following:
 Supports the following Operating Systems:
 * CentOS 6
 * CentOS 7
+* RedHat 6
+* RedHat 7
 * OracleLinux 6
 * OracleLinux 7
 * Ubuntu 12.04

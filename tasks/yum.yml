@@ -1,4 +1,9 @@
 ---
+- include_vars: "{{ item }"
+  with_first_found:
+   - "{{ ansible_distribution }}.yml"
+   - "{{ ansible_os_family }}.yml"
+   - "default.yml"
 - name: YUM | Disable UEK R3 for Oracle Linux
   yum_repository:
     name: ol7_UEKR3
@@ -23,7 +28,7 @@
   yum_repository:
     name: dockerrepo
     description: Docker Repository
-    baseurl: "https://yum.dockerproject.org/repo/main/{{ ansible_distribution|lower}}/{{ ansible_distribution_major_version }}/"
+    baseurl: "https://yum.dockerproject.org/repo/main/{{ docker_package_directory }}/{{ ansible_distribution_major_version }}/"
     enabled: 1
     gpgcheck: 1
     gpgkey: https://yum.dockerproject.org/gpg
